@@ -2,16 +2,16 @@
 A streamlit app that scrapes Google News RSS feed for news, summarizes it and displays as per choice - by top trending, category or as per a search term. Also has a bit of NLP magic working behind the scenes - to summarize long articles into a crisp little news byte.
 
 # Dependencies
-## Required dependencies
+### Required dependencies
 * streamlit (*web interface*)
 * nltk (*natural language toolkit for analysing data*)
 * newspaper3k (*analysing news articles*)
 * bs4 (*for webscraping*)
 
-## Optional dependencies
+### Optional dependencies
 * black (*for formatting*)
   
-## nltk packages required
+### nltk packages required
 * punkt (*for parsing & natural language processing*)
 * vader_lexicon (*for sentiment analysis*)
   
