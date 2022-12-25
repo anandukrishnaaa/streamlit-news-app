@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup as soup
 try:
     nltk.data.find("punkt")
     nltk.data.find("vader_lexicon")
-except LookupError as e:
+except Exception as e:
     print(e)
     nltk.download("punkt")
     nltk.download("vader_lexicon")
@@ -61,7 +61,7 @@ def load_news(news_list, news_no=5):
         except Exception as e:
             st.error(f"Error parsing news content, {e}")
         st.header(f'''{index+1}. {news.title.text}''')
-        st.image(f'''{news_data.top_image if isinstance(news_data.top_image, str) else 'https://picsum.photos/1200/720'}''')
+        st.image(f'''{news_data.top_image}''')
         st.caption(f'''{news.title.text}''')
         st.subheader(f'''{news_data.summary}''')
         st.markdown(
@@ -105,7 +105,7 @@ def load_news(news_list, news_no=5):
 def run():
     st.title("streamlit News App :newspaper:")
     st.sidebar.title("streamlit News App :newspaper:")
-    st.sidebar.write("A streamlit app that scrapes Google News RSS feed for news, summarizes it and displays as per choice - by top trending, category or as per a search term. Also has a bit of NLP magic working behind the scenes")
+    st.sidebar.write("A streamlit app that scrapes Google News RSS feed for news, summarizes it and displays as per choice - by top trending, a specific category or just type in a search term. Also has a bit of NLP magic working behind the scenes - to summarize long articles into a crisp little news byte.")
     category = [
     "Select an option",
     "Top trending news 🔥",
