@@ -15,7 +15,6 @@ A streamlit app that scrapes Google News RSS feed for news, summarizes it and di
 * punkt
 * vader_lexicon
   
-1. Create a virtual environment 
-   ```virtualenv .streamlit-news-app``` 
-2. ```pip install -r requirements.txt```
-   
+1. Create a virtual environment ```virtualenv .streamlit-news-app``` and activate it.
+2. ```pip install -r requirements.txt``` to install required libraries.
+3. Run the app ```streamlit run streamlit-news-app.py ```
